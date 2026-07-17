@@ -1,6 +1,6 @@
 #!/usr/bin/env bb
 ;; hokorobi 綻び — finrisk-ledger persistence + heartbeat tests.
-;; Run:  bb --classpath 20-actors 20-actors/hokorobi/tests/test_kotoba.cljc
+;; Run:  bb --classpath 20-actors tests/test_kotoba.cljc
 (ns hokorobi.tests.test-kotoba
   (:require [hokorobi.methods.kotoba :as k]
             [hokorobi.methods.autorun :as auto]

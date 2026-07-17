@@ -7,7 +7,7 @@
             [hokorobi.methods.datom-emit :as de]))
 
 (def seed
-  (str (-> *file* clojure.java.io/file .getParentFile .getParentFile)
+  (str (clojure.java.io/file (System/getProperty "user.dir"))
        "/data/seed-finrisk-graph.kotoba.edn"))
 
 (defn- load-seed [] (analyze/load-file* seed))
