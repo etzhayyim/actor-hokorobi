@@ -84,3 +84,13 @@ forecasting — never-trades). Together they mirror the financial world from dis
 only, the production side staying Charter-excluded. The contagion (`:interconnects`) 縁 make
 linchpin market infrastructure (clearing CCPs) visible as systemic concentrators routed to
 resilience.
+## Standalone multirepo contract
+
+- `manifest.edn` is the canonical actor manifest; JSON is compatibility data only.
+- Generic publication invariants come from the SHA-pinned
+  `com.etzhayyim/social-publication` dependency.
+- IE-flow metrics, gates, and scoring come from the SHA-pinned
+  `com.etzhayyim/ie-flow` dependency, which pins `com.etzhayyim/kotoba-datom` transitively.
+- Source and tests use `src/hokorobi`, `test/hokorobi`, and repository-local data paths. Do not restore
+  `20-actors`, `70-tools`, or superproject-relative classpaths.
+- Run `./run_tests.sh` from a standalone checkout before committing.

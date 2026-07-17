@@ -1,13 +1,13 @@
 #!/usr/bin/env bb
 ;; hokorobi 綻び — ie-flow embedding tests (the SoS scoring leg).
-;; Run:  bb -cp "20-actors:70-tools/src:20-actors/kotodama/src" 20-actors/hokorobi/methods/test_ie_flow.cljc
+;; Run:  bb -cp "20-actors:70-tools/src:20-actors/kotodama/src" methods/test_ie_flow.cljc
 (ns hokorobi.methods.test-ie-flow
   (:require [hokorobi.methods.analyze :as an]
             [hokorobi.methods.ie-flow :as ief]
             [etzhayyim.ie-flow.score :as score]
             [clojure.test :refer [deftest is run-tests]]))
 
-(def seed-path "20-actors/hokorobi/data/seed-finrisk-graph.kotoba.edn")
+(def seed-path "data/seed-finrisk-graph.kotoba.edn")
 (defn- g [] (an/load-file* seed-path))
 
 (deftest events-well-formed

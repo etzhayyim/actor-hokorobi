@@ -1,6 +1,6 @@
 #!/usr/bin/env bb
 ;; hokorobi 綻び — tests for the contagion-linchpins (interconnect-degree) lens.
-;; Run:  bb --classpath 20-actors 20-actors/hokorobi/tests/test_contagion_linchpins.cljc
+;; Run:  bb --classpath 20-actors tests/test_contagion_linchpins.cljc
 (ns hokorobi.tests.test-contagion-linchpins
   "Tests for contagion-linchpins — the count of :interconnects edges incident to a node (its
   contagion degree), surfacing the linchpin market infrastructure (CCPs, dealer banks) whose

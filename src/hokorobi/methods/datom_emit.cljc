@@ -143,7 +143,7 @@
      File I/O only at this edge (mirrors datom_emit.py main)."
      [& argv]
      (let [argv (vec argv)
-           here (-> *file* clojure.java.io/file .getParentFile .getParentFile)
+           here (clojure.java.io/file (System/getProperty "user.dir"))
            seed (if (and (seq argv) (not (str/starts-with? (first argv) "--")))
                   (clojure.java.io/file (first argv))
                   (clojure.java.io/file here "data" "seed-finrisk-graph.kotoba.edn"))
