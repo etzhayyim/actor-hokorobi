@@ -45,18 +45,16 @@ finance-risk structure as a public-interest resilience map.
 ## Layout
 
 ```
-20-actors/hokorobi/
+com-etzhayyim-hokorobi/
 ├── CLAUDE.md                           # this file
-├── manifest.jsonld                     # actor manifest (3 cells, 8 gates)
+├── manifest.edn                        # canonical actor manifest (3 cells, 8 gates)
 ├── data/
 │   └── seed-finrisk-graph.kotoba.edn   # real PUBLIC institutions (G-SIB/IAIS/pension) + risk 縁
-├── methods/                            # pure-stdlib (no numpy) → kotoba pywasm-runnable
-│   ├── analyze.py                      # edge-primary systemic-risk vs resilience analyzer
-│   ├── datom_emit.py                   # kotoba Datom-log (EAVT) emitter — canonical state
-│   └── coverage_report.py              # honest coverage + gap map (G5)
-├── tests/                              # 8 tests, pure stdlib
-│   ├── test_analyze.py
-│   └── test_coverage.py
+├── src/hokorobi/methods/               # substrate-native CLJC implementation
+│   ├── analyze.cljc                    # edge-primary systemic-risk vs resilience analyzer
+│   ├── datom_emit.cljc                 # kotoba Datom-log (EAVT) emitter — canonical state
+│   └── coverage_report.cljc            # honest coverage + gap map (G5)
+├── test/hokorobi/                      # repository-local Clojure tests
 ├── wasm/
 │   └── README.md                       # kotoba pywasm actor (componentize-py) design
 └── out/                                # GENERATED — do not hand-edit
@@ -68,11 +66,7 @@ finance-risk structure as a public-interest resilience map.
 ## Run
 
 ```bash
-cd 20-actors/hokorobi
-python3 methods/analyze.py          # → out/systemic-risk-report.md
-python3 methods/datom_emit.py       # → out/finrisk-datoms.kotoba.edn (EAVT)
-python3 methods/coverage_report.py  # → out/coverage-report.md
-python3 tests/test_analyze.py && python3 tests/test_coverage.py   # 8 green
+bb run_tests.clj
 ```
 
 ## Cross-links
@@ -93,4 +87,4 @@ resilience.
   `com.etzhayyim/ie-flow` dependency, which pins `com.etzhayyim/kotoba-datom` transitively.
 - Source and tests use `src/hokorobi`, `test/hokorobi`, and repository-local data paths. Do not restore
   `20-actors`, `70-tools`, or superproject-relative classpaths.
-- Run `./run_tests.sh` from a standalone checkout before committing.
+- Run `bb run_tests.clj` from a standalone checkout before committing.

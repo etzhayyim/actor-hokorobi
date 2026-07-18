@@ -1,17 +1,18 @@
-# hokorobi 綻び — kotoba pywasm actor (componentize-py)
+# hokorobi 綻び — kotoba WASM actor boundary
 
-Design for running hokorobi's analyzer as a **kotoba pywasm actor** under the
+Design for running hokorobi's analyzer as a content-addressed actor under the
 "one Worker, many WASM actors" model (ADR-2606014500 / 2606014600), identical in shape to
 the inochi (ADR-2606073000) and asobi (ADR-2606073200) actors. The only first-party
 Cloudflare Worker is `etzhayyim.com` (identity / `did.json`); the actor is a
 **content-addressed WASM component** fetched from IPFS and run **locally** (browser via
 ameno, or the donated mesh via e7m-wasm-runner) — **no per-actor server** (no-server-key).
 
-## Why pywasm fits hokorobi
+## Current substrate
 
-hokorobi's methods are **pure-stdlib Python (no numpy)** so they compile to a WASM Component
-via **componentize-py**. The edge-primary systemic-risk/resilience computation is a graph
-integral over `:en/risk-load` — no native deps. The same code runs as a CLI cell on a mesh
+The former Python implementation has been retired. Canonical implementations are portable
+CLJC under `src/hokorobi/methods/`; the mesh/runtime owns component compilation. The
+edge-primary systemic-risk/resilience computation is a graph integral over `:en/risk-load`
+with no native numerical dependency. The same source runs as a cell on a mesh
 node and in-WASM in the browser with zero server trust (the reader recomputes the component
 CID and compares it to the DID-doc CID before executing).
 

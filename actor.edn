@@ -1,8 +1,0 @@
-{:did        "did:web:etzhayyim.github.io:com-etzhayyim-hokorobi"
- :handle     "hokorobi.etzhayyim.com"
- :ipns-key   "hokorobi-actor"
- :graph-type "com.etzhayyim.hokorobi.graph"
- :published  "2026-06-28"
- :bundle [["data" "data"]
-          [".well-known/did.json" "did.json"]
-          ["README.md" "README.md"]]}

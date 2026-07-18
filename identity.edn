@@ -1,0 +1,7 @@
+{:identity/id "did:web:etzhayyim.com:actor:hokorobi"
+ :identity/actor "hokorobi"
+ :identity/handle "hokorobi.etzhayyim.com"
+ :identity/ipns-key "hokorobi-actor"
+ :identity/canonical-document "manifest.edn"
+ :identity/external-did-document ".well-known/did.json"
+ :identity/canonical-format :edn}

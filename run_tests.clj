@@ -1,0 +1,14 @@
+(require '[clojure.test :as t])
+
+(def suites '[hokorobi.methods.test-datom-emit
+              hokorobi.methods.test-ie-flow
+              hokorobi.murakumo-test
+              hokorobi.social-publication-test
+              hokorobi.tests.test-analyze
+              hokorobi.tests.test-contagion-linchpins
+              hokorobi.tests.test-coverage
+              hokorobi.tests.test-kotoba
+              hokorobi.repository-contract-test])
+(apply require suites)
+(let [{:keys [fail error]} (apply t/run-tests suites)]
+  (System/exit (if (zero? (+ fail error)) 0 1)))
