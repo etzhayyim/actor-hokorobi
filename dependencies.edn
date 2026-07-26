@@ -4,7 +4,7 @@
    :dependency/revision "6f3148a2902c457389b657a67aa70147952d7aaa"
    :dependency/paths ["90-docs/adr"]}
   {:dependency/id com.etzhayyim/social-publication :dependency/revision "e8127d0661284b1c12ce1b216c84b5ed2db619ab"}
-  {:dependency/id com.etzhayyim/ie-flow :dependency/revision "35d36d912c9596dbc5094947b60202d9abdf61e6"}
+  {:dependency/id kotoba-lang/ie-flow :dependency/revision "35d36d912c9596dbc5094947b60202d9abdf61e6"}
   {:dependency/id com.etzhayyim/asobi :dependency/revision "87b4d9d169a32f3bcd39d8650e5bd5185b6eb094"}
   {:dependency/id com.etzhayyim/danjo :dependency/revision "040520906acd07478391f80170181e7cf7919391"}
   {:dependency/id com.etzhayyim/inochi :dependency/revision "80c16d364c53a12f3713d1e29133e80e54621106"}
