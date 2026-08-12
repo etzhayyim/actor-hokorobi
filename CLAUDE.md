@@ -45,7 +45,7 @@ finance-risk structure as a public-interest resilience map.
 ## Layout
 
 ```
-com-etzhayyim-hokorobi/
+actor-hokorobi/
 ├── CLAUDE.md                           # this file
 ├── manifest.edn                        # canonical actor manifest (3 cells, 8 gates)
 ├── data/
