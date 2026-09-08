@@ -2,7 +2,7 @@
   "hokorobi 綻び — Datom-emit tests (ADR-2606073400). 1:1 port of the two datom_emit-dependent
   tests in tests/test_analyze.py (test_datom_emit_ground_and_transient + test_determinism)."
   (:require [clojure.test :refer [deftest is]]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [hokorobi.methods.analyze :as analyze]
             [hokorobi.methods.datom-emit :as de]))
 
