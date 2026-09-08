@@ -7,7 +7,7 @@
   all institutions is ~0 by design (a bounded :representative seed).
 
   Pure fns; reuses hokorobi.methods.analyze for the loader. Portable .cljc."
-  (:require [clojure.string :as str]
+  (:require [kotoba.lang.text :as str]
             [hokorobi.methods.analyze :as analyze]))
 
 ;; honest external denominators for the institution count

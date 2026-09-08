@@ -14,7 +14,7 @@
   + edges content-stable → resume-safe. IDEMPOTENT-BY-CONTENT: a beat whose ground datoms
   equal the previous beat's is a NO-OP. No-server-key: appends to a local file only, no
   network I/O. G1: a RESILIENCE map, never a panic/trading/market signal; never-trades."
-  (:require [clojure.string :as str]
+  (:require [kotoba.lang.text :as str]
             [hokorobi.methods.analyze :as analyze]
             [hokorobi.methods.datom-emit :as de]
             [hokorobi.methods.kotoba :as k]

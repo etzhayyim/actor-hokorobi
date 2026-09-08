@@ -23,7 +23,7 @@
   appends to a local file. G1: the ledger is a RESILIENCE map of systemic financial
   risk, NEVER a panic / trading / market signal and NEVER a solvency verdict —
   hokorobi never-trades."
-  (:require [clojure.string :as str]
+  (:require [kotoba.lang.text :as str]
             #?(:clj [clojure.java.io :as io])))
 
 (defn add [entity attr value] [":db/add" entity attr value])

@@ -1,7 +1,7 @@
 (ns hokorobi.tests.test-coverage
   "hokorobi 綻び — coverage-report tests (ADR-2606073400). 1:1 Clojure port of tests/test_coverage.py."
   (:require [clojure.test :refer [deftest is run-tests]]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [clojure.set]
             [clojure.java.io :as io]
             [hokorobi.methods.analyze :as analyze]

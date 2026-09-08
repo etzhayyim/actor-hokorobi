@@ -13,7 +13,7 @@
   House style (mirrors analyze.cljc): Python ':…' keyword strings stay literal strings;
   datoms are emitted as exact text (byte-for-byte the Python emit); float _fmt mirrors
   Python's f-string `{v:g}`; pure fns, file I/O only at the #?(:clj) edge."
-  (:require [clojure.string :as str]
+  (:require [kotoba.lang.text :as str]
             [hokorobi.methods.analyze :as analyze]))
 
 ;; ── attribute emit order (NODE_ATTRS / EDGE_ATTRS) — exact Python list order ───────────────
