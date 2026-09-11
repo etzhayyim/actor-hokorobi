@@ -1,6 +1,6 @@
-#!/usr/bin/env bb
+#!/usr/bin/env kbb
 ;; hokorobi 綻び — ie-flow embedding tests (the SoS scoring leg).
-;; Run:  bb -cp "20-actors:70-tools/src:20-actors/kotodama/src" methods/test_ie_flow.cljc
+;; Run:  kbb -cp "20-actors:70-tools/src:20-actors/kotodama/src" methods/test_ie_flow.cljc
 (ns hokorobi.methods.test-ie-flow
   (:require [hokorobi.methods.analyze :as an]
             [hokorobi.methods.ie-flow :as ief]
