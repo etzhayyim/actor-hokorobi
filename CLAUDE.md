@@ -66,7 +66,7 @@ actor-hokorobi/
 ## Run
 
 ```bash
-bb run_tests.cljk
+kbb run_tests.cljk
 ```
 
 ## Cross-links
@@ -87,4 +87,4 @@ resilience.
   `com.etzhayyim/ie-flow` dependency, which pins `com.etzhayyim/kotoba-datom` transitively.
 - Source and tests use `src/hokorobi`, `test/hokorobi`, and repository-local data paths. Do not restore
   `20-actors`, `70-tools`, or superproject-relative classpaths.
-- Run `bb run_tests.cljk` from a standalone checkout before committing.
+- Run `kbb run_tests.cljk` from a standalone checkout before committing.

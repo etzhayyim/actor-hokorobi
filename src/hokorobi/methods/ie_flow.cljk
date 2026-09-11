@@ -1,4 +1,4 @@
-#!/usr/bin/env bb
+#!/usr/bin/env kbb
 ;; hokorobi 綻び — ie-flow embedding (the SoS scoring leg) via the shared gate-adapter.
 (ns hokorobi.methods.ie-flow
   "ie_flow.cljc — hokorobi 綻び embeds the information-energy flow lifecycle (etzhayyim.ie-flow,

@@ -1,4 +1,4 @@
-#!/usr/bin/env bb
+#!/usr/bin/env kbb
 ;; hokorobi 綻び — systemic-finance-risk graph DATOM-LOG writer (content-addressed commit-DAG).
 (ns hokorobi.methods.kotoba
   "kotoba.cljc — hokorobi 綻び append-only FINRISK LEDGER writer

@@ -1,4 +1,4 @@
-#!/usr/bin/env bb
+#!/usr/bin/env kbb
 ;; hokorobi 綻び — autonomous heartbeat: load the finrisk graph → append GROUND datoms.
 (ns hokorobi.methods.autorun
   "autorun.cljc — hokorobi 綻び deterministic heartbeat (ADR-2606073400, inochi/asobi pattern).
