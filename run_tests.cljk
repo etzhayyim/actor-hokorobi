@@ -1,4 +1,4 @@
-(require '[clojure.test :as t])
+(require '[kotoba.test :as t])
 
 (def suites '[hokorobi.methods.test-datom-emit
               hokorobi.methods.test-ie-flow
