@@ -2,8 +2,8 @@
   "hokorobi 綻び — coverage-report tests (ADR-2606073400). 1:1 Clojure port of tests/test_coverage.py."
   (:require [kotoba.test :refer [deftest is run-tests]]
             [kotoba.lang.text :as str]
-            [clojure.set]
-            [clojure.java.io :as io]
+            [kotoba.lang.coll]
+            [kotoba.io :as io]
             [hokorobi.methods.analyze :as analyze]
             [hokorobi.methods.coverage-report :as coverage]))
 
@@ -27,5 +27,5 @@
         sectors (set (for [n (vals nodes)
                            :when (= ":institution" (get n ":organism/kind"))]
                        (get n ":inst/sector")))]
-    (is (clojure.set/subset? #{":bank" ":insurer" ":pension-fund"} sectors)
+    (is (kotoba.lang.coll/subset? #{":bank" ":insurer" ":pension-fund"} sectors)
         (str "missing a pillar: " sectors))))

@@ -6,7 +6,7 @@
             [hokorobi.methods.autorun :as auto]
             [kotoba.lang.text :as str]
             [kotoba.test :refer [deftest is run-tests]]
-            [clojure.java.io :as io]))
+            [kotoba.io :as io]))
 
 (defn- tmp [] (str (System/getProperty "java.io.tmpdir") "/hokorobi-ledger-test-" (gensym) ".edn"))
 (defn- d1 [] [(k/add "inst:gsib-bank" ":organism/kind" ":institution")
