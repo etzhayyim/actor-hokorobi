@@ -5,7 +5,7 @@
   (:require [hokorobi.methods.analyze :as an]
             [hokorobi.methods.ie-flow :as ief]
             [etzhayyim.ie-flow.score :as score]
-            [clojure.test :refer [deftest is run-tests]]))
+            [kotoba.test :refer [deftest is run-tests]]))
 
 (def seed-path "data/seed-finrisk-graph.kotoba.edn")
 (defn- g [] (an/load-file* seed-path))

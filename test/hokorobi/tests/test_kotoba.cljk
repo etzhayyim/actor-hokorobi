@@ -5,7 +5,7 @@
   (:require [hokorobi.methods.kotoba :as k]
             [hokorobi.methods.autorun :as auto]
             [kotoba.lang.text :as str]
-            [clojure.test :refer [deftest is run-tests]]
+            [kotoba.test :refer [deftest is run-tests]]
             [clojure.java.io :as io]))
 
 (defn- tmp [] (str (System/getProperty "java.io.tmpdir") "/hokorobi-ledger-test-" (gensym) ".edn"))

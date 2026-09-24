@@ -7,7 +7,7 @@
   interconnectedness makes them systemic concentrators. A structural network reading, never a
   per-institution solvency verdict (G1)."
   (:require [hokorobi.methods.analyze :as a]
-            [clojure.test :refer [deftest is run-tests]]))
+            [kotoba.test :refer [deftest is run-tests]]))
 
 (def ^:private nodes
   {"ccp" {":organism/label" "CCP"} "b1" {":organism/label" "Bank 1"} "b2" {} "b3" {} "x" {}})
